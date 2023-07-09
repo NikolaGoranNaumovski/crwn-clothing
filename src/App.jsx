@@ -1,15 +1,12 @@
-import { CategoryContainer } from "./components/category-container/CategoryContainer";
+import CategoryMenu from "./components/category-menu/CategoryMenu.jsx";
+import { categories } from "./utils.js";
 
-import './categories.styles.scss'
+import "./categories.styles.scss";
 
 const App = () => {
-  const categories = ["Hats", "Jackets", "Sneakers", "Womens", "Mens"];
-
   return (
     <div className="categories-container">
-      {categories.map((item) => (
-        <CategoryContainer key={item} name={item} />
-      ))}
+      <CategoryMenu categories={categories} />
     </div>
   );
 };
