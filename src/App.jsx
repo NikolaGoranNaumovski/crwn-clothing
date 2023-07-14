@@ -1,5 +1,5 @@
-import CategoryMenu from "./components/category-menu/CategoryMenu.jsx";
 import { categories } from "./utils.js";
+import CategoryMenu from "./components/category-menu/CategoryMenu.jsx";
 
 const App = () => {
   return (
