@@ -1,11 +1,25 @@
-import { categories } from "./utils.js";
-import CategoryMenu from "./components/category-menu/CategoryMenu.jsx";
+import Home from "./routes/home";
+
+import Navigation from "./components/navigation/Navigation";
+
+import { Route, Routes } from "react-router-dom";
+import SignIn from "./routes/sign-in";
+
+const Shop = () => {
+  return (<div>
+    Home
+  </div>)
+}
 
 const App = () => {
   return (
-    <div className="categories-container">
-      <CategoryMenu categories={categories} />
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path='sign-in' element={<SignIn />} />
+      </Route>
+    </Routes>
   );
 };
 
